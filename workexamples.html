@@ -57,13 +57,65 @@
 
         <div id="Programming" class="tabcontent">
               <h2>Programming Project 1</h2>
-               <p>Here is a <a href="http://heedlessgame.com/">website</a> that contains a series of assignments I completed for a course.<br>
+               <p>Here is a <a href="tapered-businesses.000webhostapp.com">website</a> that contains a series of assignments I completed for a course.<br>
                The work involved very simple Javascript programs that cover topics like from validation, animations, Jquery, and more.</p>
               <h2>Programming Project 2</h2>
+              <p>Below is a snippet of code I used in a team project where we designed a User Interface.<br>
+              For my part, I allowed to user to add and modify websites to a database.</p>
+              <p>private void webURLActionPerformed(java.awt.event.ActionEvent evt) { <br>                                      
+        // TODO add your handling code here:<br> 
+    }    <br>                                   
+
+    private void submitChangesActionPerformed(java.awt.event.ActionEvent evt) {  <br>                                             
+        if(websiteNameText.getText().isEmpty())<br> 
+        {<br> 
+            JOptionPane.showMessageDialog(null, "Website name cannot be empty.");<br> 
+            return;<br> 
+        }<br> 
+        else if (webURL.getText().isEmpty())<br> 
+        {<br> 
+            JOptionPane.showMessageDialog(null, "Website URL cannot be empty.");<br> 
+            return;<br> 
+        }<br> 
+        else if (websiteDAText.getText().isEmpty())<br> 
+        {<br> 
+            JOptionPane.showMessageDialog(null, "Data allowance cannot be empty.");<br> 
+            return;<br> 
+        }<br> 
+        try{<br> 
+        Double number = Double.parseDouble(websiteDAText.getText());<br> 
+        }catch (NumberFormatException ex) {<br> 
+            JOptionPane.showMessageDialog(null, "Data allowance must be a number.");<br> 
+            return;<br> 
+        }<br> 
+        Websites currentWebsite;<br> 
+        MainPanel panel = new MainPanel();<br> 
+        int select = panel.getIndex();<br> 
+        currentWebsite = HumanInterfaceProject.websiteArray.get(select);<br> 
+        String webName = websiteNameText.getText();<br> 
+        currentWebsite.setwebsiteName(webName);<br> 
+        String webURLs = webURL.getText();<br> 
+        currentWebsite.setURL(webURLs);<br> 
+        double number = Double.parseDouble(websiteDAText.getText());<br> 
+        currentWebsite.setwebsiteDataAllowance(number);<br> 
+        this.dispose();<br> 
+    } 
+
+</p>
         </div>
 
         <div id="SoftSkills" class="tabcontent">
               <h2>Soft Skills Project 1</h2>
+              <p>Below is the presentation I made along with two other team members for a<br> 
+              JAVA User Interface class. During this project, I stepped forward and initiated planning<br>
+              and communication with my team members to ensure we had a clear understanding of our roles.</p>
+              <iframe
+    src="teamd.pdf"
+    frameBorder="0"
+    scrolling="auto"
+    height="800px"
+    width="400px"
+></iframe>
         </div>
 
         <div id="Capstone" class="tabcontent">
@@ -72,8 +124,8 @@
     src="Charter.pdf"
     frameBorder="0"
     scrolling="auto"
-    height="800px"
-    width="400px"
+    height="600px"
+    width="800px"
 ></iframe>
         </div>
         
